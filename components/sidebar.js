@@ -7,6 +7,7 @@ import HomeIcon from '@/icons/homeIcon'
 import IntegrationIcon from '@/icons/integrationIcon'
 import LayerIcon from '@/icons/layerIcon'
 import LifeIcon from '@/icons/lifeIcon'
+import LogoutIcon from '@/icons/logoutIcon'
 import NavIcon from '@/icons/navIcon'
 import NotificationIcon from '@/icons/notificationIcon'
 import PieIcon from '@/icons/pieIcon'
@@ -43,18 +44,18 @@ const Sidebar = ({openPanel,setOpenPanel}) => {
                 </div>
             </div>
         </div>
-        {openPanel && <div className='w-[281px] py-8 pl-4 border-r-[1.5px]'>
+        {openPanel && <div className='w-[281px] py-8 pl-4 border-r-[1.5px] flex flex-col'>
             <h1 className='text-[16px] font-medium'>Settings</h1>
-            <div className='text-[16px] font-semibold text-[#344054] flex flex-col items-center  mt-6 ml-4 gap-1.5'>
+            <div className='flex-1 text-[16px] font-semibold text-[#344054] flex flex-col items-center  mt-6 ml-6 gap-1.5'>
                 <h2 className='flex gap-3 items-center w-full cursor-pointer hover:bg-gray-50 p-2 rounded-md -ml-8'>
                     <span><FlagIcon/></span>
                     <span>My Details</span>
                 </h2>
                 <h2 className='flex gap-3 items-center w-full cursor-pointer hover:bg-gray-50 p-2 rounded-md -ml-8'>
                     <span><UserSqIcon/></span>
-                    <span className='flex w-full pr-6'>
+                    <span className='flex w-full pr-2 items-center'>
                         <span className='flex-1'>Profile</span>
-                        <span>10</span>
+                        <span className='p-1 px-2 text-[12px] bg-gray-200 rounded-xl'>10</span>
                     </span>
                 </h2>
                 <h2 className='flex gap-3 items-center w-full cursor-pointer hover:bg-gray-50 p-2 rounded-md -ml-8'>
@@ -77,6 +78,15 @@ const Sidebar = ({openPanel,setOpenPanel}) => {
                     <span><IntegrationIcon/></span>
                     <span>Integrations</span>
                 </h2>
+            </div>
+            <div>
+            <h1 className='text-[14px] font-medium text-[#101828] flex items-center'>
+                <span className='flex-1'>Olivia Rhye</span>
+                <span className='mr-4 p-2 rounded-lg hover:bg-gray-100 cursor-pointer'><LogoutIcon/></span>
+            </h1>
+            <p className='text-[14px] font-normal text-[#475467] -mt-2'>
+                olivia@untitledui.com
+            </p>
             </div>
         </div>}
     </div>

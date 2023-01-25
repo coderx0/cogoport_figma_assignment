@@ -32,7 +32,7 @@ export default function Home() {
       <h1 className='text-[14px] font-medium text-[#344054]'>Personal Info</h1>
       <p className='text-[14px] font-normal text-[#475467]'>Update your photo and personal details.</p>
       </div>
-      <div className='lg:flex-1 box_border  mt-4 font-medium text-[14px] leading-5' id="input-form">
+      <div className='lg:flex-1 box_border  mt-4 font-medium text-[14px] leading-5'>
         <div id='section-content' className=''>
         <div className='flex flex-col md:flex-row'>
         <div className="w-full px-4 flex flex-col gap-2 mt-4">
@@ -40,7 +40,7 @@ export default function Home() {
             <span className="text-[#344054]">First Name</span>
           </label>
           <div className={`w-full ${!openPanel && 'md:w-80'} md:pr-2`}>
-          <input type="text" placeholder="Type here" className="w-full input_border py-[10px] px-[14px] text-[#101828] text-[16px]" />
+          <input type="text" placeholder="Type here" className="w-full input_border py-[10px] px-[14px] text-[#101828] text-[16px]" defaultValue={'Olivia'}/>
           </div>
           </div>
         <div className="w-full px-4 flex flex-col gap-2 mt-4">
@@ -48,7 +48,7 @@ export default function Home() {
             <span className="text-[#344054]">Last Name</span>
           </label>
         <div className={`w-full ${!openPanel && 'md:w-80'} md:pr-2`}>
-        <input type="text" placeholder="Type here" className="w-full input_border py-[10px] px-[14px] text-[#101828] text-[16px]" />
+        <input type="text" placeholder="Type here" className="w-full input_border py-[10px] px-[14px] text-[#101828] text-[16px]" defaultValue={'Rhye'}/>
         </div>
         </div>
         </div>
@@ -58,7 +58,7 @@ export default function Home() {
           </label>
           <div className={`flex gap-2 input_border items-center pl-4 w-full ${!openPanel && 'md:w-[600px]'}`}>
             <span><MailIcon/></span>
-            <input type="email" placeholder="Type here" className="py-[10px] pl-[12px] w-full text-[#101828] text-[16px] input_border_2" />
+            <input type="email" placeholder="Type here" className="py-[10px] pl-[12px] w-full text-[#101828] text-[16px] input_border_2" defaultValue={'olivia@untitledui.com'}/>
           </div>
         </div>
         <div className='pt-6 '>
@@ -99,6 +99,7 @@ export default function Home() {
     </div>
   </div>
 
+<div className='md:w-fill md:border-b-2 md:mx-8 md:mt-8'></div>
     <ProfileSection/>
     
  </div>

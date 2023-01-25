@@ -12,7 +12,7 @@ import UnorderedListIcon from '@/icons/unOrderedListIcon'
 
 const ProfileSection = () => {
 
-  const [charCount,setCharCount] = useState(500);
+  const [charCount,setCharCount] = useState(275);
 
   return (
     <div className='pt-6 px-4 pb-6 md:px-8'>
@@ -21,12 +21,12 @@ const ProfileSection = () => {
         <h1 className='text-[#344054] font-semibold'>Profile</h1>
         <p className='text-[#475467] font-normal'>Update your portfolio and bio.</p>
         </div>
-        <div className='box_border lg:flex-1 mt-4 font-medium text-[14px] leading-5' id="input-form">
+        <div className='box_border lg:flex-1 mt-4 font-medium text-[14px] leading-5'>
           <div id='section-content' className=''>
           <div className="w-full px-4 flex flex-col mt-4"> 
             <div className='flex gap-3'>
             <label className="relative inline-flex items-center cursor-pointer">
-                <input type="checkbox" value="" className="sr-only peer"/>
+                <input type="checkbox" value="" className="sr-only peer" defaultChecked/>
                 <div className="w-11 h-6 bg-white rounded-full dark:bg-gray-400 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2.5px] after:left-[2px] after:bg-white after:rounded-full after:h-[19px] after:w-[19px] after:transition-all peer-checked:bg-[#7F56D9]"></div>
             </label>
             <h1 className='text-[14px] font-semibold text-[#344054]'>Available For Projects</h1>   
@@ -41,7 +41,7 @@ const ProfileSection = () => {
             <span className='text-[16px] text-[#475467] py-3 px-2 border-r-2 font-normal'>
               untitledui.com/
             </span>
-            <input type="text" placeholder="Type here" className="w-full input_border_2 pt-[10px] pb-[12px] px-[14px] text-[#101828] text-[16px]" />
+            <input type="text" placeholder="Type here" className="w-full input_border_2 pt-[10px] pb-[12px] px-[14px] text-[#101828] text-[16px]" defaultValue={'olivia'}/>
             </div>
           </div>
           <div className="w-full px-4 flex flex-col gap-2 mt-4">
@@ -52,7 +52,7 @@ const ProfileSection = () => {
             <span className='text-[16px] text-[#475467] py-3 px-2 border-r-2 font-normal'>
               http://
             </span>
-            <input type="text" placeholder="Type here" className="w-full input_border_2 pt-[10px] pb-[12px] px-[14px] text-[#101828] text-[16px]" />
+            <input type="text" placeholder="Type here" className="w-full input_border_2 pt-[10px] pb-[12px] px-[14px] text-[#101828] text-[16px]" defaultValue={'www.untitledui.com'}/>
             </div>
           </div>
           <div className="w-full px-4 flex flex-col gap-2 mt-4">
@@ -60,7 +60,9 @@ const ProfileSection = () => {
               <span className="text-[#344054]">Description</span>
             </label>
             <div className='flex  items-stretch text-[16px]'>
-            <textarea onChange={(e)=>setCharCount(()=>(500-e.target.value.length))} className='input_border w-full text-[16px] p-2' rows={6}></textarea>
+            <textarea onChange={(e)=>setCharCount(()=>(399-e.target.value.length))} className='input_border w-full text-[16px] p-4 resize-none' rows={5}
+              defaultValue={"I'm a Product Designer based in Melbourne, Australia. I specialise in UX/UI design, brand strategy, and Webflow development."}
+            ></textarea>
             </div>
             <span className='text-[14px] font-normal text-[#475467]'>{charCount} characters left</span>
           </div>
